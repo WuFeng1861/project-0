@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes title-glow {
+  0%, 100% { text-shadow: 0 0 20px rgba(74, 222, 128, 0.5); }
+  50% { text-shadow: 0 0 30px rgba(74, 222, 128, 0.8); }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes nebula-drift {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200px, -100px, 0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-title {
+  animation: title-glow 3s ease-in-out infinite;
+}
+
+.stars {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #86efac, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #86efac, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  opacity: 0.3;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+.twinkling {
+  background-image: 
+    radial-gradient(3px 3px at 150px 150px, #fff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 250px 250px, #86efac, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 350px 350px, #fff, rgba(0,0,0,0)),
+    radial-gradient(3px 3px at 450px 450px, #86efac, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  opacity: 0.2;
+  animation: twinkle 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.nebula {
+  background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20') center/cover no-repeat;
+  opacity: 0.15;
+  animation: nebula-drift 60s linear infinite;
+}
+
+body {
+  @apply text-white bg-[#0B0B1E] antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
