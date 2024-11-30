@@ -3,6 +3,17 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Activity } from 'lucide-react';
 import { GalaxyBackground } from '../components/GalaxyBackground';
 
+const SUGGESTION_IMAGES: Record<string, string> = {
+  'DeFi': 'https://wufeng98.cn/imgweb/uploads/1731834093611-Defi.png',
+  'NFT': 'https://wufeng98.cn/imgweb/uploads/1731834093627-NFT.png',
+  'Web3': 'https://wufeng98.cn/imgweb/uploads/1731834093632-Web3.png',
+  '智能合约': 'https://wufeng98.cn/imgweb/uploads/1731834093599-contract.png',
+  'MERC 交易所': 'https://wufeng98.cn/imgweb/uploads/1731834093616-Mexchange.png',
+  'DAO': 'https://wufeng98.cn/imgweb/uploads/1731834093604-dao.png',
+  'Ai 音乐': 'https://wufeng98.cn/imgweb/uploads/1731834093594-ai-music.png',
+  'MERC NOTE 节点': 'https://wufeng98.cn/imgweb/uploads/1731834093623-mNode.png',
+};
+
 export function LivePage() {
   const navigate = useNavigate();
   const { suggestion } = useParams();
@@ -53,7 +64,7 @@ export function LivePage() {
                         overflow-hidden">
             <div className="flex flex-col items-center gap-4">
               <Activity className="w-8 h-8 text-green-400 animate-pulse" />
-              <p className="text-green-400/70 text-lg">实况内容加载中...</p>
+              <img src={SUGGESTION_IMAGES[suggestion || '']} alt={suggestion || ''} />
             </div>
           </div>
         </div>

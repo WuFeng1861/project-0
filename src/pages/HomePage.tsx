@@ -5,7 +5,7 @@ import { GalaxyBackground } from '../components/GalaxyBackground';
 import { SearchBox } from '../components/SearchBox';
 import { SearchSuggestions } from '../components/SearchSuggestions';
 
-const SUGGESTIONS = ['DeFi', 'NFT', 'Web3', '智能合约', 'MERC 交易所', 'DAO', 'Ai 音乐', 'MERC NOTE 节点'];
+const SUGGESTIONS = [ 'MERC 交易所', 'Ai 音乐', 'MERC NOTE 节点', 'DeFi', 'NFT', 'Web3', '智能合约', 'DAO' ];
 
 export function HomePage() {
   const navigate = useNavigate();
